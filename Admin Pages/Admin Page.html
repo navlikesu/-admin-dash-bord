@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>One Convergence</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+       <style>
+       #fieldset { 
+  
+         margin:2% 2% 2% 2%;
+         padding-top: 0.75em;
+         padding-bottom: 0.75em;
+         padding-left: 0.75em;
+         padding-right: 0.75em;
+         border: 2px solid grey;
+        }
+
+         
+        </style>
+
+
+
+
+
+    <!-- HTML6 Shim and Respond.js IE8 support of HTML6 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html6shiv/3.7.0/html6shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+ </head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="Admin Page.html">One Convergence</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    
+                  </li> 
+                    <!-- /.dropdown-messages -->
+                
+                <!-- /.dropdown -->
+                
+                    <!-- /.dropdown-tasks -->
+                
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-flag-o" aria-hidden="true"></i> System Allotted-IP
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-flag-o" aria-hidden="true"></i> System Taken-IP
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-flag-o" aria-hidden="true"></i> System Updated-IP
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Alert's</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        
+                                                    <!-- /.nav-second-level -->
+                       
+                       
+                        <li>
+                            <a href="Add New Device.html"><i class="fa fa-desktop fa-fw"></i> Add New Device</a>
+                        </li>
+                        
+                            <!-- /.nav-second-level -->
+                       
+                        <li>
+                            <a href="Search.html"><i class="fa fa-search fa-fw"></i> Search</a>
+                            </li>
+                                                     <!-- /.nav-third-level -->
+                               
+                          
+                        
+                       
+                        <li>
+                            <a href="All Setups.html"><i class="fa fa-list-alt" aria-hidden="true"></i> All Setup's</a>
+                            
+                            <!-- /.nav-second-level -->
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+
+           
+        </nav>
+        </div>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Admin Dashboard</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+            <h3 style="text-align: center;"><b>List of Desktop's</b></h3><br>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-desktop fa-3x" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div style="color: white" class="medium">IP:192.168.5.1</div>
+                                    <div>user</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span style="font-size: 15px;" class="pull-left">
+                                <button type="button" class="btn" data-toggle="modal" data-target="#myModal">Edit</button></span>
+                               <span class="pull-right"><button type="button" class="btn" data-toggle="modal" data-target="#myModal2">Delete</button></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-desktop fa-3x" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div style="color: white" class="medium">IP:192.168.5.2
+                                    </div>
+                                    <div>user</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span  style="font-size: 15px;" class="pull-left"><button type="button" class="btn" data-toggle="modal" data-target="#myModal">Edit</button></span>
+                                <span class="pull-right"><button type="button" class="btn" data-toggle="modal" data-target="#myModal2">Delete</button></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-desktop fa-3x" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div style="color: white" class="medium">IP:192.168.5.3</div>
+                                   
+                         <div>user</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span  style="font-size: 15px;" class="pull-left"><button type="button" class="btn" data-toggle="modal" data-target="#myModal">Edit</button></span>
+                                <span class="pull-right"><button type="button" class="btn" data-toggle="modal" data-target="#myModal2">Delete</button></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-red">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-desktop fa-3x" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div style="color: white" class="medium">IP:192.168.5.4</div>
+                                    <div>user</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span style="font-size: 15px;" class="pull-left"><button type="button" class="btn" data-toggle="modal" data-target="#myModal">Edit</button></span>
+                                <span class="pull-right"><button type="button" class="btn" data-toggle="modal" data-target="#myModal2">Delete</button></span>
+                                <div class="clearfix">
+                                    
+                                </div>                            </div>
+                        </a>
+                    </div>
+                </div>
+                <i class="fa fa-chevron-down" aria-hidden="true" style="align-content: right"></i>
+            </div>   
+               
+                        
+                <h3 style="text-align: center;"><b>List of Laptop's</b></h3><br>
+                 <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-laptop fa-3x" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div style="color: white" class="medium">IP:192.168.5.5</div>
+                                    <div>user</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span style="font-size: 15px;" class="pull-left"><button type="button" class="btn" data-toggle="modal" data-target="#myModal">Edit</button></span>
+                                <span class="pull-right"><button type="button" class="btn" data-toggle="modal" data-target="#myModal2">Delete</button></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-laptop fa-3x" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div style="color: white" class="medium">IP:192.168.5.6</div>
+                                    <div>user</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span style="font-size: 15px;" class="pull-left"><button type="button" class="btn" data-toggle="modal" data-target="#myModal">Edit</button></span>
+                                <span class="pull-right"><button type="button" class="btn" data-toggle="modal" data-target="#myModal2">Delete</button></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>      
+    
+
+                    <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-laptop fa-3x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div style="color: white" class="medium">IP:192.168.5.7</div>
+                                    <div>user</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span style="font-size: 15px;" class="pull-left"><button type="button" class="btn" data-toggle="modal" data-target="#myModal">Edit</button></span>
+                                <span class="pull-right"><button type="button" class="btn" data-toggle="modal" data-target="#myModal2">Delete</button></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>      
+
+                    <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-red">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-laptop fa-3x " aria-hidden="true"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div style="color: white" class="medium">IP:192.168.5.8</div>
+                                    <div>user</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span style="font-size: 15px;" class="pull-left"><button type="button" class="btn" data-toggle="modal" data-target="#myModal">Edit</button></span>
+                                <span class="pull-right"><button type="button" class="btn" data-toggle="modal" data-target="#myModal2">Delete</button></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>  
+                            <i class="fa fa-chevron-down" aria-hidden="true" style="align-content: right"></i>  
+
+                     </div>
+
+
+                <h3 style="text-align: center;"><b>List of Idle System's</b></h3> <br>
+                
+
+
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-tasks fa-3x" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div style="color: white" class="medium">IP:192.168.5.9</div>
+                                    <div>user</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span style="font-size: 15px;" class="pull-left"><button type="button" class="btn" data-toggle="modal" data-target="#myModal">Edit</button></span>
+                               <span class="pull-right"><button type="button" class="btn" data-toggle="modal" data-target="#myModal2">Delete</button></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>      
+
+
+
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-tasks fa-3x" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div style="color: white" class="medium">IP:192.168.6.0</div>
+                                    <div>user</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span style="font-size: 15px;" class="pull-left"><button type="button" class="btn" data-toggle="modal" data-target="#myModal">Edit</button></span>
+                                <span class="pull-right"><button type="button" class="btn" data-toggle="modal" data-target="#myModal2">Delete</button></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>      
+
+
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-tasks fa-3x" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div style="color: white" class="medium">IP:192.168.6.1</div>
+                                    <div>user</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span style="font-size: 15px;" class="pull-left"><button type="button" class="btn" data-toggle="modal" data-target="#myModal">Edit</button></span>
+                                <span class="pull-right"><button type="button" class="btn" data-toggle="modal" data-target="#myModal2">Delete</button></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>      
+
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-red">
+                        <div class="panel-heading">
+                            <div class="row" >
+                                <div class="col-xs-3">
+                                    <i class="fa fa-tasks fa-3x" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div style="color: white" class="medium">IP:192.168.6.2</div>
+                                    <div>user</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span style="font-size: 15px;" class="pull-left"><button type="button" class="btn" data-toggle="modal" data-target="#myModal">Edit</button></span>
+                                <span class="pull-right"><button type="button" class="btn" data-toggle="modal" data-target="#myModal2">Delete</button></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>      
+    
+    
+
+                    <i class="fa fa-chevron-down" aria-hidden="true" style="align-content: right"></i>
+            </div>
+ 
+ 
+
+              <!--  model 1 start-->
+
+            <div id="myModal" class="modal fade" role="dialog" style="background-color: transparent;">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                      
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title">Edit Device</h2>
+                      </div>
+
+                        <div class="modal-body">
+                          <div class="form-group">
+                            <label for="usr" style="margin-left: 2%"><b>User Name :</b></label>
+                            <label for="name">Naveen Paladugu</label>
+                          </div> 
+
+                          <div class="form-group">
+                            <b><label for="sel1" style="margin-left: 2%">Device Type :</label></b>
+                            <select class="form-control" id="sel1" style="width: 30%; margin-left: 2%">
+                              <option>--select type--</option>
+                              <option>Laptop</option>
+                              <option>Desktop</option>
+                              <option>Other..</option>
+                            </select>
+                          </div>  
+    
+                          <div class="form-group">
+                           <label for="usr" style="margin-left: 2%";><b>IP Address :</b></label>
+                            <input type="text" class="form-control" id="usr" style="width: 50%; margin-left: 2%"; placeholder="Enter valid Device IP Address">
+                          </div>
+
+                          <div>
+                            <label style="margin-left: 2%"><h3>Configuration :</h3></label>
+                            <fieldset id="fieldset">
+                              <div class="form-group">
+                                <span class="pull-left">
+                               <label for="usr"><b> RAM :</b></label>
+                                <input type="text" class="form-control" id="usr" placeholder="Enter the size of RAM">
+                                </span>
+                                    
+                                <span class="pull-right">
+                                <label for="usr"><b>HDD :</b></label>
+                                <input type="text" class="form-control" id="usr" placeholder="Enter the size of Hard Disk">
+                                </span>
+                              </div>
+
+                                      
+                              <div class="form-group">
+                                <span class="pull-left">
+                                <label for="usr"><b>Processor :</b></label>
+                                <input type="text" class="form-control" id="usr" placeholder="Enter the Type of Processor">
+                                </span>
+ 
+                                <span class="pull-right">
+                               <label for="usr"><b>OS :</b></label>
+                                <input type="text" class="form-control" id="usr" placeholder="Enter the Type of Operating System">
+                                </span>
+                              </div>
+                              </fieldset>
+                            </div><br>
+
+                            <div class="form-group">
+                            
+                                <input type="button" class="btn btn-default" style="margin-left: 2%" value="+MORE">   
+                                
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                           <span >
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Save/Submit</button>
+                           </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  model 1 finish-->  
+            <!--  model 2 start-->
+
+           <div id="myModal2" class="modal fade" role="dialog">
+               <div class="modal-dialog">
+                   <div class="modal-content">
+                     
+                     <div class="modal-header">
+                       <button type="button" class="close" data-dismiss="modal">&times;</button>
+                       <h4 class="modal-title">Delete Device</h4>
+                     </div>
+
+                     <div class="modal-body">
+                        <div class="form-group">
+                            <h3>Are you sure you want to delete?</h3>
+                        </div> 
+
+                        <div class="form-group">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">No</button>
+                        </div>
+
+
+
+                     </div>  
+
+                   </div>
+               </div>      
+    </div>           <!--  model 2 finish-->    
+
+
+
+
+
+
+
+
+
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"> </script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="../vendor/raphael/raphael.min.js"></script>
+    <script src="../vendor/morrisjs/morris.min.js"></script>
+    <script src="../data/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>
